@@ -2,7 +2,6 @@
 
 namespace Bluesheep\BladeForm;
 
-use Bluesheep\BladeForm\Commands\BladeFormCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
