@@ -2,9 +2,9 @@
 
 namespace Bluesheep\BladeForm;
 
+use Bluesheep\BladeForm\Commands\BladeFormCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Bluesheep\BladeForm\Commands\BladeFormCommand;
 
 class BladeFormServiceProvider extends PackageServiceProvider
 {

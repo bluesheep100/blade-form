@@ -2,9 +2,9 @@
 
 namespace Bluesheep\BladeForm\Tests;
 
+use Bluesheep\BladeForm\BladeFormServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Bluesheep\BladeForm\BladeFormServiceProvider;
 
 class TestCase extends Orchestra
 {
