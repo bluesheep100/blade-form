@@ -1,6 +1,5 @@
 <?php
 
-// config for Bluesheep/BladeForm
 return [
-
+    'autoload_components' => true,
 ];

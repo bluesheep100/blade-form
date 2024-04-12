@@ -1,7 +1,6 @@
-# A group of easy-to-use Blade components for making forms with less code by adhering to conventions.
+# Make simple backend forms with ease!
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/bluesheep100/blade-form.svg?style=flat-square)](https://packagist.org/packages/bluesheep100/blade-form)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/bluesheep100/blade-form/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/bluesheep100/blade-form/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/bluesheep100/blade-form/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/bluesheep100/blade-form/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/bluesheep100/blade-form.svg?style=flat-square)](https://packagist.org/packages/bluesheep100/blade-form)
 
@@ -13,48 +12,46 @@ You can install the package via composer:
 composer require bluesheep100/blade-form
 ```
 
-You can publish the config file with:
+## Usage
 
-```bash
+All the components included in this package can be accessed via. the `x-bluesheep::` vendor prefix:
+```html
+<x-bluesheep::input/>
+```
+
+If you want to customize the components, you can publish them to your own project:
+```shell
+php artisan vendor:publish --tag="blade-form-components"
+```
+This also publishes the backend class files to your `app/View/Components` directory.
+
+They can then be referenced like any other Blade component, without the vendor prefix:
+```html
+<x-input/>
+```
+
+## Configuration
+
+You can publish the configuration file to your project's `/config` directory:
+```
 php artisan vendor:publish --tag="blade-form-config"
 ```
 
-Additionally, you can publish the views using
+### Options
 
-```bash
-php artisan vendor:publish --tag="blade-form-views"
-```
+| Option                | Default         | Description                                                                                                     |
+|-----------------------|-----------------|-----------------------------------------------------------------------------------------------------------------|
+| `autoload_components` | Default:`true`  | Auto-registers components with Laravel. `false` registers manually without vendor prefix. (can cause conflicts) |
 
-## Usage
-
-```php
-$bladeForm = new Bluesheep\BladeForm();
-echo $bladeForm->echoPhrase('Hello, Bluesheep!');
-```
-
-## Testing
-
-```bash
-composer test
-```
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
 ## Credits
 
 - [Anders Aagaard Schütt](https://github.com/bluesheep100)
-- [All Contributors](../../contributors)
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see the [License File](LICENSE.md) for more information.

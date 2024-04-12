@@ -2,7 +2,6 @@
 
 namespace Bluesheep\BladeForm;
 
-use Bluesheep\BladeForm\Commands\BladeFormCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,9 +16,8 @@ class BladeFormServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('blade-form')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_blade-form_table')
-            ->hasCommand(BladeFormCommand::class);
+            ->hasConfigFile();
+
+        $package->hasViewComponents('Bluesheep\\BladeForm\\Views\\Components', 'bladeform');
     }
 }
